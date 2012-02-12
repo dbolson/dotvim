@@ -12,7 +12,7 @@ To compile Command-T:
 cd Command-T/
 rvm use system
 rake make
-rvm use ruby-1.9.2-head
+rvm use {ruby version}
 
 To install JS Lint:
 
