@@ -1,0 +1,33 @@
+[submodule "bundle/Command-T"]
+	path = bundle/Command-T
+	url = git://github.com/wincent/Command-T.git
+[submodule "bundle/javaScriptLint.vim"]
+	path = bundle/javaScriptLint.vim
+	url = git://github.com/joestelmach/javaScriptLint.vim.git
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "bundle/ruby-matchit"]
+	path = bundle/ruby-matchit
+	url = git://github.com/vim-scripts/ruby-matchit.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = git://github.com/ervandew/supertab.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = git://github.com/scrooloose/syntastic.git
+[submodule "bundle/vim-gitgrep"]
+	path = bundle/vim-gitgrep
+	url = git://github.com/aghareza/vim-gitgrep.git
+[submodule "bundle/vim-rails"]
+	path = bundle/vim-rails
+	url = git://github.com/tpope/vim-rails.git
+[submodule "bundle/Zoomwin"]
+	path = bundle/Zoomwin
+	url = git://github.com/vim-scripts/ZoomWin.git
+[submodule "bundle/Kwbd.vim"]
+	path = bundle/Kwbd.vim
+	url = git://github.com/rgarver/Kwbd.vim.git
