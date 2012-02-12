@@ -1,0 +1,19 @@
+Instructions:
+
+git clone http://github.com/dbolson/dotvim.git ~/.vim
+ln -s ~/.vim/vimrc ~/.vimrc
+ln -s ~/.vim/gvimrc ~/.gvimrc
+cd ~/.vim
+git submodule init
+git submodule update
+
+To compile Command-T:
+
+cd Command-T/
+rvm use system
+rake make
+rvm use ruby-1.9.2-head
+
+To install JS Lint:
+
+http://www.javascriptlint.com/docs/index.htm
