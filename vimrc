@@ -32,9 +32,10 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 " Status bar
 set laststatus=2
 
-" Directories for swp files
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
+" Turn off backup files
+set noswapfile
+set nobackup
+set nowb
 
 " Show (partial) command in the status line
 set showcmd
@@ -107,9 +108,6 @@ nnoremap <silent> <leader>bd :Kwbd<CR>
 
 "open up a git grep line, with a quote started for the search
 nnoremap <leader>gg :GitGrep ""<left>
-"grep for 'def foo'
-nnoremap <silent> <leader>gd :GitGrep 'def <cword>'<CR>
-"git grep visual selection
-vnoremap K :<C-U>execute GitGrep(GetVisual())<CR>
-"git grep current word up to the next exclamation point
-nnoremap <leader>K viwf!:<C-U>execute GitGrep(GetVisual())<CR>
+
+"git grep the current word using K (mnemonic Kurrent)
+nnoremap <silent> K :GitGrep <cword><CR>
