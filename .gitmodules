@@ -31,3 +31,6 @@
 [submodule "bundle/Kwbd.vim"]
 	path = bundle/Kwbd.vim
 	url = git://github.com/rgarver/Kwbd.vim.git
+[submodule "bundle/jasmine"]
+	path = bundle/jasmine
+	url = git://github.com/claco/jasmine.vim.git

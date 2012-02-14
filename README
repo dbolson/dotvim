@@ -17,3 +17,7 @@ rvm use {ruby version}
 To install JS Lint:
 
 http://www.javascriptlint.com/docs/index.htm
+
+To install ctags:
+
+http://adamyoung.net/Exuberant-Ctags-OS-X
