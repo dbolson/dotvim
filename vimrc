@@ -1,3 +1,5 @@
+set nocompatible
+
 call pathogen#infect()
 let mapleader = ","
 color vividchalk
@@ -37,6 +39,9 @@ set noswapfile
 set nobackup
 set nowb
 
+" Reload files changed outside vim
+set autoread
+
 " Show (partial) command in the status line
 set showcmd
 
@@ -58,12 +63,12 @@ nnoremap <silent> <leader>w :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
+" Command-T configuration
+let g:CommandTMaxHeight=20
+
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
-
-" Command-T configuration
-let g:CommandTMaxHeight=20
 
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>
@@ -107,7 +112,7 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 nnoremap <silent> <leader>bd :Kwbd<CR>
 
 "open up a git grep line, with a quote started for the search
-nnoremap <leader>gg :GitGrep ""<left>
+nnoremap <leader>gg :GitGrep 
 
 "git grep the current word using K (mnemonic Kurrent)
 nnoremap <silent> K :GitGrep <cword><CR>
