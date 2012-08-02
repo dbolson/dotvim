@@ -67,6 +67,7 @@ set noequalalways
 let g:CommandTMaxHeight=20
 
 " NERDTree configuration
+nnoremap <silent> <C-\> :NERDTreeFind<CR>
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
 
@@ -76,6 +77,8 @@ map <Leader><Leader> :ZoomWin<CR>
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
+
+map <Leader>ctf :CommandTFlush<CR>
 
 " Remember last location in file
 if has("autocmd")
@@ -109,10 +112,51 @@ runtime! macros/matchit.vim
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 
+" copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
+nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
+nnoremap <silent> ,cn :let @* = expand("%:t")<CR>
+
 nnoremap <silent> <leader>bd :Kwbd<CR>
 
-"open up a git grep line, with a quote started for the search
+" open up a git grep line, with a quote started for the search
 nnoremap <leader>gg :GitGrep 
 
-"git grep the current word using K (mnemonic Kurrent)
+" git grep the current word using K (mnemonic Kurrent)
 nnoremap <silent> K :GitGrep <cword><CR>
+
+" Better key maps for switching between controller and view
+nnoremap ,vv :Rview<cr>
+nnoremap ,cc :Rcontroller<cr>
+
+" Find the related spec for any file you open. Requires
+"  * Your specs live in spec/ or fast_spec/
+"  * Your pwd (current dir) is the project root
+"  * You use the same dir structure in your code and specs so that
+"    code living at lib/foo/bar.rb has a spec at spec/lib/foo/bar.rb
+"
+" This method handles files in fast_spec unlike the :A and :AV functions
+" that ship with rails.vim
+function! FindSpec()
+  let s:fullpath = expand("%:p")
+  let s:filepath = expand("%:h")
+  let s:fname = expand("%:t")
+
+  " Possible names for the spec/test for the file we're looking at
+  let s:test_names = [substitute(s:fname, ".rb$", "_spec.rb", ""), substitute(s:fname, ".rb$", "_test.rb", "")]
+
+  " Possible paths
+  let s:test_paths = ["spec", "fast_spec", "test"]
+  for test_name in s:test_names
+    for path in s:test_paths
+      let s:filepath_without_app = substitute(s:filepath, "app/", "", "")
+      let s:spec_path = path . "/" . s:filepath_without_app . "/" . test_name
+      let s:full_spec_path = substitute(s:fullpath, s:filepath . "/" . s:fname, s:spec_path, "")
+      if filereadable(s:full_spec_path)
+        execute ":botright vsp " . s:full_spec_path
+        return
+      endif
+    endfor
+  endfor
+endfunction
+
+nnoremap <C-s> :call FindSpec()<CR>

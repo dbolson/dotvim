@@ -5,7 +5,7 @@ set visualbell
 
 " Start without the toolbar
 set guioptions-=T
-set guifont=Menlo\ Regular:h14
+set guifont=Menlo\ Regular:h16
 
 " Command-T for CommandT
 macmenu &File.New\ Tab key=<D-T>
