@@ -1,9 +1,6 @@
 [submodule "bundle/Command-T"]
 	path = bundle/Command-T
 	url = git://github.com/wincent/Command-T.git
-[submodule "bundle/javaScriptLint.vim"]
-	path = bundle/javaScriptLint.vim
-	url = git://github.com/joestelmach/javaScriptLint.vim.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
@@ -37,3 +34,6 @@
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
 	url = git://github.com/vim-scripts/ack.vim.git
+[submodule ".vim/bundle/jshint"]
+	path = .vim/bundle/jshint
+	url = git://github.com/walm/jshint.vim.git

@@ -8,16 +8,15 @@ git submodule init
 git submodule update
 
 To compile Command-T:
+  cd Command-T/
+  rvm use system
+  rake make
+  rvm use {ruby version}
 
-cd Command-T/
-rvm use system
-rake make
-rvm use {ruby version}
-
-To install JS Lint:
-
-http://www.javascriptlint.com/docs/index.htm
+To install JSHint:
+  brew install node
+  curl https://npmjs.org/install.sh | sh
+  npm install jshint
 
 To install ctags:
-
-http://adamyoung.net/Exuberant-Ctags-OS-X
+  http://adamyoung.net/Exuberant-Ctags-OS-X
