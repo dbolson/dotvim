@@ -7,12 +7,6 @@ cd ~/.vim
 git submodule init
 git submodule update
 
-To compile Command-T:
-  cd Command-T/
-  rvm use system
-  rake make
-  rvm use {ruby version}
-
 To install JSHint:
   brew install node
   curl https://npmjs.org/install.sh | sh

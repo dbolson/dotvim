@@ -58,13 +58,8 @@ endif
 " Unlike before, the substitution text must be specified in order to use the required flag.
 nnoremap <silent> <leader>w :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
-" Without setting this, ZoomWin restores windows in a way that causes
-" equalalways behavior to be triggered the next time CommandT is used.
-" This is likely a bludgeon to solve some other issue, but it works
-set noequalalways
-
-" Command-T configuration
-let g:CommandTMaxHeight=20
+" Control-P
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " NERDTree configuration
 nnoremap <silent> <C-\> :NERDTreeFind<CR>
@@ -78,7 +73,8 @@ map <Leader><Leader> :ZoomWin<CR>
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
 
-map <Leader>ctf :CommandTFlush<CR>
+" Control-P
+map <Leader>cpc :CtrlPClearCache<CR>
 
 " Remember last location in file
 if has("autocmd")
