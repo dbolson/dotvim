@@ -16,7 +16,7 @@ To compile Command-T:
 To install JSHint:
   brew install node
   curl https://npmjs.org/install.sh | sh
-  npm install jshint
+  npm install -g jshint
 
 To install ctags:
   http://adamyoung.net/Exuberant-Ctags-OS-X
