@@ -60,6 +60,8 @@ nnoremap <silent> <leader>w :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl
 
 " Control-P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+map <Leader>b :CtrlPBuffer<CR>
+map <Leader>cpc :CtrlPClearCache<CR>
 
 " NERDTree configuration
 nnoremap <silent> <C-\> :NERDTreeFind<CR>
@@ -73,8 +75,6 @@ map <Leader><Leader> :ZoomWin<CR>
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
 
-" Control-P
-map <Leader>cpc :CtrlPClearCache<CR>
 
 " Remember last location in file
 if has("autocmd")
@@ -98,9 +98,6 @@ map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
-
-" Disable ugly JSLint highlighting
-let g:jslint_highlight_color=""
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
