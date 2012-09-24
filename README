@@ -13,4 +13,11 @@ To install JSHint:
   npm install -g jshint
 
 To install ctags:
-  http://adamyoung.net/Exuberant-Ctags-OS-X
+  download from http://sourceforge.net/projects/ctags/files/ctags/5.8/ctags-5.8.tar.gz/download?use_mirror=softlayer
+  tar xzvf ctags-5.8.tar.gz
+  cd ctags-5.8
+  ./configure
+  make
+  sudo make install
+
+  if there are any problems, read this: http://runtime-era.blogspot.com/2012/05/exuberant-ctags-in-osx-107.html

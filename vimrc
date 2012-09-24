@@ -45,18 +45,13 @@ set autoread
 " Show (partial) command in the status line
 set showcmd
 
-" Automatically resize splits when resizing MacVim window
-if has("gui_running")
-  autocmd VimResized * wincmd =
-endif
-
 " With the following mapping a user can press F5 to delete all trailing whitespace.
 " The variable _s is used to save and restore the last search pattern register
 " (so next time the user presses n they will continue their last search),
 " and :nohl is used to switch off search highlighting (so trailing spaces will not be highlighted while the user types).
 " The e flag is used in the substitute command so no error is shown if trailing whitespace is not found.
 " Unlike before, the substitution text must be specified in order to use the required flag.
-nnoremap <silent> <leader>w :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+nnoremap <silent> <Leader>ws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " Control-P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -66,7 +61,7 @@ map <Leader>cpc :CtrlPClearCache<CR>
 " NERDTree configuration
 nnoremap <silent> <C-\> :NERDTreeFind<CR>
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
+map <Leader>nt :NERDTreeToggle<CR>
 
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>

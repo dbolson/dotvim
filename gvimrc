@@ -7,7 +7,12 @@ set visualbell
 set guioptions-=T
 set guifont=Menlo\ Regular:h16
 
-" Command-T for CommandT
+" Automatically resize splits when resizing MacVim window
+if has("gui_running")
+  autocmd VimResized * wincmd =
+endif
+
+" Command-T for ControlP
 macmenu &File.New\ Tab key=<D-T>
 map <D-t> :CtrlP<CR>
 imap <D-t> <Esc>:CtrlP<CR>
