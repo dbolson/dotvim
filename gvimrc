@@ -5,7 +5,6 @@ set visualbell
 
 " Start without the toolbar
 set guioptions-=T
-set guifont=Menlo\ Regular:h16
 
 " Automatically resize splits when resizing MacVim window
 if has("gui_running")

@@ -3,17 +3,16 @@ set nocompatible
 call pathogen#infect()
 let mapleader = ","
 color vividchalk
+set guifont=Menlo\ Regular:h16
 
 set cursorline
 set hidden
 set number
 set ruler
+set encoding=utf-8
 syntax on
 
-" Set encoding
-set encoding=utf-8
-
-" Whitespace stuff
+" Whitespace
 set nowrap
 set tabstop=2
 set shiftwidth=2
@@ -33,6 +32,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 " Status bar
 set laststatus=2
+set showcmd
 
 " Turn off backup files
 set noswapfile
@@ -42,16 +42,14 @@ set nowb
 " Reload files changed outside vim
 set autoread
 
-" Show (partial) command in the status line
-set showcmd
-
-" With the following mapping a user can press F5 to delete all trailing whitespace.
-" The variable _s is used to save and restore the last search pattern register
-" (so next time the user presses n they will continue their last search),
-" and :nohl is used to switch off search highlighting (so trailing spaces will not be highlighted while the user types).
-" The e flag is used in the substitute command so no error is shown if trailing whitespace is not found.
-" Unlike before, the substitution text must be specified in order to use the required flag.
+" Delete all trailing whitespace.
 nnoremap <silent> <Leader>ws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
+" copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
+nnoremap <silent> <Leader>cf :let @* = expand("%:~")<CR>
+
+" Vertical split
+map <Leader>v :vsplit <cr>
 
 " Control-P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
@@ -66,10 +64,11 @@ map <Leader>nt :NERDTreeToggle<CR>
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>
 
+nnoremap <silent> <Leader>bd :Kwbd<CR>
+
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
-
 
 " Remember last location in file
 if has("autocmd")
@@ -87,7 +86,6 @@ au BufNewFile,BufRead *.json set ft=javascript
 filetype plugin indent on
 
 " Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Enable syntastic syntax checking
@@ -100,21 +98,12 @@ runtime! macros/matchit.vim
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 
-" copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
-nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
-nnoremap <silent> ,cn :let @* = expand("%:t")<CR>
-
-nnoremap <silent> <leader>bd :Kwbd<CR>
-
 " open up a git grep line, with a quote started for the search
-nnoremap <leader>gg :GitGrep 
-
-" git grep the current word using K (mnemonic Kurrent)
-nnoremap <silent> K :GitGrep <cword><CR>
+nnoremap <Leader>gg :GitGrep 
 
 " Better key maps for switching between controller and view
-nnoremap ,vv :Rview<cr>
-nnoremap ,cc :Rcontroller<cr>
+nnoremap <Leader>rv :Rview<cr>
+nnoremap <Leader>rc :Rcontroller<cr>
 
 " Find the related spec for any file you open. Requires
 "  * Your specs live in spec/ or fast_spec/
