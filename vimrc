@@ -43,31 +43,31 @@ set nowb
 set autoread
 
 " Delete all trailing whitespace.
-nnoremap <silent> <Leader>ws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+nnoremap <silent> <leader>ws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
-nnoremap <silent> <Leader>cf :let @* = expand("%:~")<CR>
+nnoremap <silent> <leader>cf :let @* = expand("%:~")<CR>
 
-" Vertical split
-map <Leader>v :vsplit <cr>
+" Vertical split and move to new window
+nnoremap <leader>v <C-w>v<C-w>l
 
 " Control-P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-map <Leader>b :CtrlPBuffer<CR>
-map <Leader>cpc :CtrlPClearCache<CR>
+map <leader>b :CtrlPBuffer<CR>
+map <leader>cpc :CtrlPClearCache<CR>
 
 " NERDTree configuration
 nnoremap <silent> <C-\> :NERDTreeFind<CR>
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-map <Leader>nt :NERDTreeToggle<CR>
+map <leader>nt :NERDTreeToggle<CR>
 
 " ZoomWin configuration
-map <Leader><Leader> :ZoomWin<CR>
+map <leader><leader> :ZoomWin<CR>
 
-nnoremap <silent> <Leader>bd :Kwbd<CR>
+nnoremap <silent> <leader>bd :Kwbd<CR>
 
 " CTags
-map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
+map <leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
 
 " Remember last location in file
@@ -86,7 +86,7 @@ au BufNewFile,BufRead *.json set ft=javascript
 filetype plugin indent on
 
 " Opens an edit command with the path of the currently edited file filled in
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
+map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
@@ -99,11 +99,11 @@ let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 
 " open up a git grep line, with a quote started for the search
-nnoremap <Leader>gg :GitGrep 
+nnoremap <leader>gg :GitGrep 
 
 " Better key maps for switching between controller and view
-nnoremap <Leader>rv :Rview<cr>
-nnoremap <Leader>rc :Rcontroller<cr>
+nnoremap <leader>rv :Rview<cr>
+nnoremap <leader>rc :Rcontroller<cr>
 
 " Find the related spec for any file you open. Requires
 "  * Your specs live in spec/ or fast_spec/
