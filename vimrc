@@ -51,6 +51,9 @@ nnoremap <silent> <leader>cf :let @* = expand("%:~")<CR>
 " Vertical split and move to new window
 nnoremap <leader>v <C-w>v<C-w>l
 
+" Buffer previous
+map <leader>p :bp<CR>
+
 " Control-P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 map <leader>b :CtrlPBuffer<CR>
