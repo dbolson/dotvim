@@ -1,6 +1,6 @@
 set nocompatible
 
-call pathogen#infect()
+execute pathogen#infect()
 let mapleader = ","
 color vividchalk
 set guifont=Menlo\ Regular:h16
