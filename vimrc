@@ -145,7 +145,7 @@ function! FindAndReplace()
   let searchTerm = input("Search for:")
   let replaceTerm = input("Replace with:")
 
-  exec "!ack -l '" . searchTerm . "' | xargs perl -pi -E 's/" . searchTerm . "/" . replaceTerm . "/g'"
+  exec "!ack -l '" . searchTerm . "' --ignore-dir=tmp/ --ignore-dir=log/ | xargs perl -pi -E 's/" . searchTerm . "/" . replaceTerm . "/g'"
   " ack -l 'cumulative' | xargs perl -pi -E 's/cumulative/count/g'
 endfunction
 nmap <leader>fr :call FindAndReplace()<cr>
