@@ -40,3 +40,6 @@
 [submodule "bundle/vim-less"]
 	path = bundle/vim-less
 	url = git://github.com/lunaru/vim-less.git
+[submodule "bundle/ag"]
+	path = bundle/ag
+	url = git://github.com/epmatsw/ag.vim.git

@@ -103,6 +103,7 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 
 " open up a git grep line, with a quote started for the search
 nnoremap <leader>gg :GitGrep 
+nnoremap <leader>ag :Ag 
 
 " Better key maps for switching between controller and view
 nnoremap <leader>rv :Rview<cr>
