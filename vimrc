@@ -12,6 +12,11 @@ set ruler
 set encoding=utf-8
 syntax on
 
+augroup vimrc_autocmds
+  autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
+  autocmd BufEnter * match OverLength /\%80v.*/
+augroup END
+
 " Whitespace
 set nowrap
 set tabstop=2
@@ -42,7 +47,7 @@ set nowb
 " Reload files changed outside vim
 set autoread
 
-" Delete all trailing whitespace.
+" Delete all trailing whitespace
 nnoremap <silent> <leader>ws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
 " copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
