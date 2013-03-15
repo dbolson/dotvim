@@ -131,7 +131,7 @@ function! FindSpec()
   let s:test_names = [substitute(s:fname, ".rb$", "_spec.rb", ""), substitute(s:fname, ".rb$", "_test.rb", "")]
 
   " Possible paths
-  let s:test_paths = ["spec", "fast_spec", "test"]
+  let s:test_paths = ["spec", "spec_fast", "test"]
   for test_name in s:test_names
     for path in s:test_paths
       let s:filepath_without_app = substitute(s:filepath, "app/", "", "")
