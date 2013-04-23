@@ -56,6 +56,12 @@ nnoremap <silent> <leader>cf :let @* = expand("%:~")<CR>
 " Vertical split and move to new window
 nnoremap <leader>v <C-w>v<C-w>l
 
+" Easier split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 " Buffer previous
 map <leader>p :bp<CR>
 
