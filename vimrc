@@ -47,6 +47,9 @@ set nowb
 " Reload files changed outside vim
 set autoread
 
+" Open current file in marked
+nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
+
 " Delete all trailing whitespace
 nnoremap <silent> <leader>ws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
