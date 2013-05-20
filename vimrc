@@ -53,7 +53,7 @@ nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
 " Delete all trailing whitespace
 nnoremap <silent> <leader>ws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
-" copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
+" Copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
 nnoremap <silent> <leader>cf :let @* = expand("%:~")<CR>
 
 " Vertical split and move to new window
@@ -118,6 +118,11 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 " open up a git grep line, with a quote started for the search
 nnoremap <leader>gg :GitGrep 
 nnoremap <leader>ag :Ag 
+
+let g:rspec_command = "!zeus rspec {spec}"
+map <leader>t :call RunCurrentSpecFile()<CR>
+map <leader>s :call RunNearestSpec()<CR>
+map <leader>l :call RunLastSpec()<CR>
 
 " Better key maps for switching between controller and view
 nnoremap <leader>rv :Rview<cr>
