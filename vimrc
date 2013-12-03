@@ -103,8 +103,8 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=r
 au BufNewFile,BufRead *.json set ft=javascript
 
 " Add markdown syntax highlighting and spellcheck
-au BufNewFile,BufRead *.md set ft=markdown
-autocmd BufRead,BufNewFile *.md setlocal spell
+au BufRead,BufNewFile *.md set ft=markdown
+au BufRead,BufNewFile *.md setlocal spell
 
 " Load the plugin and indent settings for the detected filetype
 filetype plugin indent on
