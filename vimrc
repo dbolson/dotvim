@@ -97,12 +97,14 @@ if has("autocmd")
 endif
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
 " Add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
 
+" Add markdown syntax highlighting and spellcheck
 au BufNewFile,BufRead *.md set ft=markdown
+autocmd BufRead,BufNewFile *.md setlocal spell
 
 " Load the plugin and indent settings for the detected filetype
 filetype plugin indent on
