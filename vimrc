@@ -57,7 +57,10 @@ nnoremap <silent> <leader>ws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:noh
 nnoremap <silent> <leader>cf :let @* = expand("%:~")<CR>
 
 " Vertical split and move to new window
-nnoremap <leader>v <C-w>v<C-w>l
+nnoremap <leader>v <c-w>v<C-w>l
+
+" Horizontal split and move to new window
+nnoremap <leader>h :split<cr><c-w>j
 
 " Easier split navigation
 nnoremap <C-J> <C-W><C-J>
