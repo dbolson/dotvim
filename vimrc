@@ -44,6 +44,11 @@ set noswapfile
 set nobackup
 set nowb
 
+" Speed up
+set ttyfast
+set ttyscroll=3
+set lazyredraw
+
 " Reload files changed outside vim
 set autoread
 
@@ -95,6 +100,9 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal g'\"" | endif
 endif
+
+" Syntax coloring lines that are too long just slows down macvim
+set synmaxcol=200
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
