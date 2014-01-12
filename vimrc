@@ -73,9 +73,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Buffer previous
-map <leader>p :bp<CR>
-
 " Control-P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 map <leader>b :CtrlPBuffer<CR>
