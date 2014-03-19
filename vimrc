@@ -3,7 +3,7 @@ set nocompatible
 execute pathogen#infect()
 let mapleader = ","
 color vividchalk
-set guifont=Menlo\ Regular:h16
+set guifont=monaco:h16
 
 set cursorline
 set hidden
