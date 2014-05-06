@@ -52,6 +52,9 @@ set lazyredraw
 " Reload files changed outside vim
 set autoread
 
+" Paste last contents of what was yanked regardless of what was deleted after
+nnoremap <leader>R "0p
+
 " Open current file in marked
 nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
 
