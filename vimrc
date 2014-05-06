@@ -89,7 +89,7 @@ map <leader><leader> :ZoomWin<CR>
 nnoremap <silent> <leader>bd :Kwbd<CR>
 
 " CTags
-map <leader>rt :!ctags --extra=+f --exclude=tmp -R * <CR><CR>
+map <leader>rt :!ctags --extra=+f --exclude=tmp --exclude=node_modules -R * <CR><CR>
 map <C-\> :tnext<CR>
 
 " Remember last location in file
