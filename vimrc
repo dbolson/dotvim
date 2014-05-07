@@ -78,6 +78,7 @@ nnoremap <C-H> <C-W><C-H>
 
 " Control-P
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+set wildignore+=*/tmp/*
 map <leader>b :CtrlPBuffer<CR>
 map <leader>cpc :CtrlPClearCache<CR>
 
