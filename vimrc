@@ -148,10 +148,6 @@ map <leader>t :call RunCurrentSpecFile()<CR>
 map <leader>s :call RunNearestSpec()<CR>
 map <leader>l :call RunLastSpec()<CR>
 
-" Better key maps for switching between controller and view
-nnoremap <leader>rv :Rview<cr>
-nnoremap <leader>rc :Rcontroller<cr>
-
 " Find the related spec for any file you open. Requires
 "  * Your specs live in spec/ or fast_spec/
 "  * Your pwd (current dir) is the project root
