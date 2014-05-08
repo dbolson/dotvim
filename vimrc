@@ -179,4 +179,4 @@ function! FindSpec()
   endfor
 endfunction
 
-nnoremap <C-s> :call FindSpec()<CR>
+map <leader>fs :call FindSpec()<CR>
