@@ -65,6 +65,9 @@ nnoremap <silent> <leader>ws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:noh
 " Copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
 nnoremap <silent> <leader>cf :let @* = expand("%:~")<CR>
 
+" Copy to clipboard
+vnoremap <C-c> "*y
+
 " Vertical split and move to new window
 nnoremap <leader>v <c-w>v<C-w>l
 
