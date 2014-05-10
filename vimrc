@@ -62,7 +62,7 @@ nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
 " Delete all trailing whitespace
 nnoremap <silent> <leader>ws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
-" Copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
+" Copy current filename into system clipboard
 nnoremap <silent> <leader>cf :let @* = expand("%:~")<CR>
 
 " Copy to clipboard
@@ -122,12 +122,10 @@ au BufRead,BufNewFile *.jst set ft=html
 au BufRead,BufNewFile *.md set ft=markdown
 au BufRead,BufNewFile *.md setlocal spell
 au BufRead,BufNewFile *.md setlocal wrap
+map <leader>M :set syntax=markdown<CR>:set wrap<CR>:set spell<CR>
 
 " Load the plugin and indent settings for the detected filetype
 filetype plugin indent on
-
-" Opens an edit command with the path of the currently edited file filled in
-map <leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
 " Enable syntastic syntax checking
 let g:syntastic_enable_signs=1
@@ -147,6 +145,7 @@ let g:rspec_command = "!zeus rspec {spec}"
 map <leader>t :call RunCurrentSpecFile()<CR>
 map <leader>s :call RunNearestSpec()<CR>
 map <leader>l :call RunLastSpec()<CR>
+map <leader>z :!rspec %<CR>
 
 " Find the related spec for any file you open. Requires
 "  * Your specs live in spec/ or fast_spec/
