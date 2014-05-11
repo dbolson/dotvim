@@ -55,3 +55,21 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/vim-fireplace"]
+	path = bundle/vim-fireplace
+	url = git://github.com/tpope/vim-fireplace.git
+[submodule "bundle/vim-leiningen"]
+	path = bundle/vim-leiningen
+	url = git://github.com/tpope/vim-leiningen.git
+[submodule "bundle/vim-projectionist"]
+	path = bundle/vim-projectionist
+	url = git://github.com/tpope/vim-projectionist.git
+[submodule "bundle/vim-dispatch"]
+	path = bundle/vim-dispatch
+	url = git://github.com/tpope/vim-dispatch.git
+[submodule "bundle/vim-classpath"]
+	path = bundle/vim-classpath
+	url = git://github.com/tpope/vim-classpath.git
+[submodule "bundle/vim-clojure-static"]
+	path = bundle/vim-clojure-static
+	url = git://github.com/guns/vim-clojure-static.git
