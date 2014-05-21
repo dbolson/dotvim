@@ -57,7 +57,7 @@ set autoread
 nnoremap <leader>R "0p
 
 " Open current file in marked
-nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
+nnoremap <leader>m :silent !open -a Marked.app '%:p'<CR>
 
 " Delete all trailing whitespace
 nnoremap <silent> <leader>ws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
@@ -66,13 +66,13 @@ nnoremap <silent> <leader>ws :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:noh
 nnoremap <silent> <leader>cf :let @* = expand("%:~")<CR>
 
 " Copy to clipboard
-vnoremap <C-c> "*y
+vnoremap <C-C> "*y
 
 " Vertical split and move to new window
-nnoremap <leader>v <c-w>v<C-w>l
+nnoremap <leader>v <C-W>v<C-W>l
 
 " Horizontal split and move to new window
-nnoremap <leader>h :split<cr><c-w>j
+nnoremap <leader>h :split<CR><C-W>j
 
 " Easier split navigation
 nnoremap <C-J> <C-W><C-J>
