@@ -150,6 +150,9 @@ map <leader>s :call RunNearestSpec()<CR>
 map <leader>l :call RunLastSpec()<CR>
 map <leader>z :!rspec %<CR>
 
+" Clojure
+nnoremap <leader>E :%Eval<CR>
+
 " Find the related spec for any file you open. Requires
 "  * Your specs live in spec/ or fast_spec/
 "  * Your pwd (current dir) is the project root
