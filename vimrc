@@ -86,6 +86,9 @@ set wildignore+=*/tmp/*
 map <leader>b :CtrlPBuffer<CR>
 map <leader>cpc :CtrlPClearCache<CR>
 
+" Make CtrlP use ag for listing the files. Much faster and respects .gitignore
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
 " NERDTree configuration
 nnoremap <silent> <C-\> :NERDTreeFind<CR>
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
