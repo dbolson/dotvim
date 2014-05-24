@@ -53,6 +53,9 @@ set lazyredraw
 " Reload files changed outside vim
 set autoread
 
+" Press i to enter insert mode, ii to go back to normal mode
+imap ii <esc>
+
 " Paste last contents of what was yanked regardless of what was deleted after
 nnoremap <leader>R "0p
 
