@@ -143,11 +143,12 @@ runtime! macros/matchit.vim
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 
-" open up a git grep line, with a quote started for the search
+" Open up a git grep line, with a quote started for the search
 nnoremap <leader>gg :GitGrep 
 nnoremap <leader>ag :Ag 
 
-let g:rspec_command = "!zeus rspec {spec}"
+" Run RSpec tests
+let g:rspec_command = "!rspec {spec}"
 map <leader>t :call RunCurrentSpecFile()<CR>
 map <leader>s :call RunNearestSpec()<CR>
 map <leader>l :call RunLastSpec()<CR>
