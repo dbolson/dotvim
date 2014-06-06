@@ -148,7 +148,7 @@ nnoremap <leader>gg :GitGrep
 nnoremap <leader>ag :Ag 
 
 " Run RSpec tests
-let g:rspec_command = "!rspec {spec}"
+let g:rspec_command = "!./bin/rspec {spec}"
 map <leader>t :call RunCurrentSpecFile()<CR>
 map <leader>s :call RunNearestSpec()<CR>
 map <leader>l :call RunLastSpec()<CR>
