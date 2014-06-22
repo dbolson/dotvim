@@ -89,8 +89,22 @@ set wildignore+=*/tmp/*
 map <leader>b :CtrlPBuffer<CR>
 map <leader>cpc :CtrlPClearCache<CR>
 
-" Make CtrlP use ag for listing the files. Much faster and respects .gitignore
+" Make CtrlP use Ag for listing the files. Much faster and respects .gitignore
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+" CtrlP auto cache clearing.
+function! SetupCtrlP()
+  if exists("g:loaded_ctrlp") && g:loaded_ctrlp
+    augroup CtrlPExtension
+      autocmd!
+      autocmd FocusGained  * CtrlPClearCache
+      autocmd BufWritePost * CtrlPClearCache
+    augroup END
+  endif
+endfunction
+if has("autocmd")
+  autocmd VimEnter * :call SetupCtrlP()
+endif
 
 " NERDTree configuration
 nnoremap <silent> <C-\> :NERDTreeFind<CR>

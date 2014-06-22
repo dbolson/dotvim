@@ -76,3 +76,6 @@
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/paredit"]
+	path = bundle/paredit
+	url = https://github.com/vim-scripts/paredit.vim.git
