@@ -79,3 +79,6 @@
 [submodule "bundle/paredit"]
 	path = bundle/paredit
 	url = https://github.com/vim-scripts/paredit.vim.git
+[submodule "bundle/auto-save"]
+	path = bundle/auto-save
+	url = https://github.com/vim-scripts/vim-auto-save.git

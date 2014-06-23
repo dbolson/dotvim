@@ -83,7 +83,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Control-P
+" CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set wildignore+=*/tmp/*
 map <leader>b :CtrlPBuffer<CR>
@@ -114,7 +114,11 @@ map <leader>nt :NERDTreeToggle<CR>
 " ZoomWin configuration
 map <leader><leader> :ZoomWin<CR>
 
+" Delete buffer without closing the window
 nnoremap <silent> <leader>bd :Kwbd<CR>
+
+" enable AutoSave on Vim startup
+let g:auto_save = 1
 
 " CTags
 map <leader>rt :!ctags --extra=+f --exclude=tmp --exclude=node_modules -R * <CR><CR>
