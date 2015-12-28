@@ -1,10 +1,6 @@
 set nocompatible
 filetype off
 
-if !isdirectory(expand("~/.vim/bundle/Vundle.vim/.git"))
-  !git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-endif
-
 set runtimepath+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
@@ -41,7 +37,6 @@ Plugin 'skalnik/vim-vroom'
 Plugin 'ruby-matchit'
 
 source ~/.vim/bundles-clojure.vimrc
-source ~/.vim/bundles-javascript.vimrc
 
 call vundle#end()
 filetype plugin indent on
