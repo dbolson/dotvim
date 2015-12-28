@@ -12,6 +12,7 @@ Plugin 'mileszs/ack.vim'
 Plugin 'rking/ag.vim'
 
 " Text
+Plugin 'itspriddle/vim-marked'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
