@@ -1,0 +1,6 @@
+Bundle 'tpope/vim-dispatch'
+Bundle 'guns/vim-clojure-static'
+Bundle 'guns/vim-clojure-highlight'
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-salve'
+Bundle 'paredit.vim'
