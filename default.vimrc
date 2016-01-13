@@ -130,10 +130,8 @@ map <leader>rt :!ctags --extra=+f --exclude=tmp --exclude=node_modules -R * <CR>
 map <leader>lt :TlistToggle<CR>
 let Tlist_Use_Right_Window = 1
 
-" Exclude Javascript files in :Rtags via
-rails.vim due to warnings when parsing
-let g:Tlist_Ctags_Cmd="ctags
---exclude='*.js'"
+" Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
+let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
 " Remember last location in file
 if has("autocmd")
@@ -213,3 +211,5 @@ function! FindSpec()
 endfunction
 
 map <leader>fs :call FindSpec()<CR>
+
+:nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
