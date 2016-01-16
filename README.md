@@ -5,25 +5,12 @@
 ```
 git clone http://github.com/dbolson/dotvim.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
-ln -s ~/.vim/gvimrc ~/.gvimrc
 cd ~/.vim
-git submodule update --init
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ```
 
-### Installing Additional Plugins
+Now open Vim and run `:PluginInstall`
 
-For installing e.g., fugitive.vim:
-
-* `git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive`
-* `git submodule update --init`
-
-### Installing JSHint
-
-```
-brew install node
-curl https://npmjs.org/install.sh | sh
-npm install -g jshint
-```
 
 ### Installing CTags
 
