@@ -37,6 +37,9 @@ Plugin 'tpope/vim-rails'
 Plugin 'skalnik/vim-vroom'
 Plugin 'ruby-matchit'
 
+" JavaScript
+Plugin 'pangloss/vim-javascript'
+
 source ~/.vim/bundles-clojure.vimrc
 
 call vundle#end()
