@@ -19,7 +19,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 
 " Utilities
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rgarver/Kwbd.vim'
 Plugin 'scrooloose/nerdtree'
@@ -39,6 +39,7 @@ Plugin 'ruby-matchit'
 
 " JavaScript
 Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
 source ~/.vim/bundles-clojure.vimrc
 
