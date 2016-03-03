@@ -20,22 +20,16 @@ Plugin 'scrooloose/syntastic'
 
 " Utilities
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'rgarver/Kwbd.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'taglist.vim'
 Plugin 'ZoomWin'
 
-" Git
-Plugin 'tpope/vim-fugitive'
-
-" Syntax
-Plugin 'ekalinin/Dockerfile.vim'
-
 " Ruby
+Plugin 'ruby-matchit'
 Plugin 'tpope/vim-rails'
 Plugin 'skalnik/vim-vroom'
-Plugin 'ruby-matchit'
 
 " JavaScript
 Plugin 'pangloss/vim-javascript'
