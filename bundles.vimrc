@@ -18,6 +18,9 @@ Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 
+" Git
+Plugin 'tpope/vim-fugitive'
+
 " Utilities
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
