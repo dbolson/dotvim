@@ -7,6 +7,7 @@ let &t_Co=256
 
 filetype plugin indent on
 
+set shortmess+=I
 set cursorline
 set hidden
 set number
@@ -28,6 +29,7 @@ set nohlsearch
 set incsearch
 set ignorecase
 set smartcase
+set scrolloff=10
 
 " Tab completion
 set wildmode=list:longest,list:full
