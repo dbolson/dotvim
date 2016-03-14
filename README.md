@@ -2,6 +2,9 @@
 
 ## Instructions
 
+* [ ] foo
+* [x] bar
+
 ```
 git clone http://github.com/dbolson/dotvim.git ~/.vim
 ln -s ~/.vim/vimrc ~/.vimrc
