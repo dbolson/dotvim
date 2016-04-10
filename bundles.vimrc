@@ -38,7 +38,13 @@ Plugin 'skalnik/vim-vroom'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
-source ~/.vim/bundles-clojure.vimrc
+" Clojure
+Plugin 'tpope/vim-dispatch'
+Plugin 'guns/vim-clojure-static'
+Plugin 'guns/vim-clojure-highlight'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-salve'
+Plugin 'paredit.vim'
 
 call vundle#end()
 filetype plugin indent on
