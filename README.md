@@ -6,6 +6,8 @@
 * `cd ~/.vim`
 * `./bin/setup`
 
+## Troubleshooting
+
 ### Installing CTags
 
 ` brew install ctags`
