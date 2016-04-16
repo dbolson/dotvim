@@ -154,8 +154,9 @@ au BufRead,BufNewFile *.md setlocal wrap
 map <leader>M :set syntax=markdown<CR>:set wrap<CR>:set spell<CR>
 
 " Enable syntastic syntax checking
-let g:syntastic_enable_signs=1
-let g:syntastic_quiet_messages = {'level': 'warnings'}
+"let g:syntastic_enable_signs=0
+"let g:syntastic_quiet_messages = {'level': 'warnings'}
+"let g:syntastic_javascript_checkers = ['eslint']
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
