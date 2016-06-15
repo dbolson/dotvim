@@ -151,6 +151,7 @@ au BufNewFile,BufRead *.json set ft=javascript
 au BufRead,BufNewFile *.md set ft=markdown
 au BufRead,BufNewFile *.md setlocal spell
 au BufRead,BufNewFile *.md setlocal wrap
+let g:markdown_fenced_languages = ['html', 'vim', 'ruby', 'python', 'bash=sh']
 map <leader>M :set syntax=markdown<CR>:set wrap<CR>:set spell<CR>
 
 " Enable syntastic syntax checking
