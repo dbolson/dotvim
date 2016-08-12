@@ -128,7 +128,7 @@ map <leader><leader> :ZoomWin<CR>
 nnoremap <silent> <leader>bd :Kwbd<CR>
 
 " CTags
-map <leader>rt :!ctags --extra=+f --exclude=tmp --exclude=node_modules -R * <CR><CR>
+map <leader>rt :!ctags --extra=+f --exclude=tmp --exclude=node_modules --exclude=vendor -R * <CR><CR>
 map <leader>lt :TlistToggle<CR>
 let Tlist_Use_Right_Window = 1
 
@@ -180,5 +180,6 @@ map <unique> <leader>s :VroomRunNearestTest<CR>
 let g:vroom_map_keys = 0
 let g:vroom_clear_screen = 0
 let g:vroom_detect_spec_helper = 1
+let g:vroom_use_binstubs = 1
 
 :nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
