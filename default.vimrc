@@ -173,13 +173,16 @@ nnoremap <leader>pt :set invpaste paste?<cr>
 set pastetoggle=<leader>pt
 set showmode
 
-" Run RSpec tests with Vroom
+" Run RSpec tests with vim-vroom
 nnoremap <unique> <leader>t :VroomRunTestFile<CR>
 map <unique> <leader>s :VroomRunNearestTest<CR>
 
 let g:vroom_map_keys = 0
 let g:vroom_clear_screen = 0
 let g:vroom_detect_spec_helper = 1
-let g:vroom_use_binstubs = 1
+
+if filereadable("./bin/rspec")
+  let g:vroom_use_binstubs = 1
+endif
 
 :nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
