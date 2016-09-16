@@ -185,4 +185,4 @@ if filereadable("./bin/rspec")
   let g:vroom_use_binstubs = 1
 endif
 
-:nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
+nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
