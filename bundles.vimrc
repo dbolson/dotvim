@@ -46,5 +46,8 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-salve'
 Plugin 'paredit.vim'
 
+" Golang
+Plugin 'fatih/vim-go'
+
 call vundle#end()
 filetype plugin indent on
