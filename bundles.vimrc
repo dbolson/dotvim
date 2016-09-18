@@ -32,7 +32,7 @@ Plugin 'ZoomWin'
 " Ruby
 Plugin 'ruby-matchit'
 Plugin 'tpope/vim-rails'
-Plugin 'skalnik/vim-vroom'
+Plugin 'janko-m/vim-test'
 
 " JavaScript
 Plugin 'pangloss/vim-javascript'
