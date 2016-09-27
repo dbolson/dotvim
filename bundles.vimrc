@@ -28,6 +28,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rgarver/Kwbd.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ZoomWin'
+Plugin 'metakirby5/codi.vim'
 
 " Ruby
 Plugin 'ruby-matchit'
