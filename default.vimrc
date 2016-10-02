@@ -1,7 +1,7 @@
 set nocompatible
 
 let mapleader = ","
-color vividchalk
+colorscheme solarized
 set guifont=monaco:h16
 let &t_Co=256
 
