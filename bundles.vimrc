@@ -12,7 +12,6 @@ Plugin 'mileszs/ack.vim'
 Plugin 'rking/ag.vim'
 
 " Text
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'itspriddle/vim-marked'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
