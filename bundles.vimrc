@@ -50,5 +50,8 @@ Plugin 'paredit.vim'
 " Scala
 Plugin 'derekwyatt/vim-scala'
 
+" Docker
+Plugin 'ekalinin/Dockerfile.vim'
+
 call vundle#end()
 filetype plugin indent on
