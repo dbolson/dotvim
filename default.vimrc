@@ -172,9 +172,6 @@ nnoremap <leader>pt :set invpaste paste?<cr>
 set pastetoggle=<leader>pt
 set showmode
 
-" vim.test to have pytest work with file_test.py instead of just test_file.py
-let g:test#python#pytest#file_pattern = '^.*_test\.py$'
-
 " Testing
 nmap <silent> <leader>s :TestNearest<CR>
 nmap <silent> <leader>t :TestFile<CR>
