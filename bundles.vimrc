@@ -50,6 +50,9 @@ Plugin 'paredit.vim'
 " Scala
 Plugin 'derekwyatt/vim-scala'
 
+" Python
+Plugin 'indentpython.vim'
+
 " Docker
 Plugin 'ekalinin/Dockerfile.vim'
 
