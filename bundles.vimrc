@@ -8,6 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Files
+Plugin 'jlanzarotta/bufexplorer'
 Plugin 'mileszs/ack.vim'
 Plugin 'rking/ag.vim'
 
