@@ -127,12 +127,8 @@ map <leader><leader> :ZoomWin<CR>
 nnoremap <silent> <leader>bd :Kwbd<CR>
 
 " CTags
-map <leader>rt :!ctags --extra=+f --exclude=tmp --exclude=node_modules --exclude=vendor -R * <CR><CR>
-map <leader>lt :TlistToggle<CR>
-let Tlist_Use_Right_Window = 1
-
-" Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
-let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
+set tags=./.tags,.tags,./tags,tags
+map <leader>rt :!ctags -R -f ./tags . <CR>
 
 " Remember last location in file
 if has("autocmd")
@@ -140,7 +136,6 @@ if has("autocmd")
         \| exe "normal g'\"" | endif
 endif
 
-" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 
 " Add json syntax highlighting
