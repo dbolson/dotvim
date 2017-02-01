@@ -148,6 +148,9 @@ au BufRead,BufNewFile *.md setlocal wrap
 let g:markdown_fenced_languages = ['html', 'vim', 'ruby', 'python', 'bash=sh', 'scala']
 map <leader>M :set syntax=markdown<CR>:set wrap<CR>:set spell<CR>
 
+" Change smart quotes
+map <leader>" :%s/[“”]/"/g<CR><BAR>:%s/’/'/g<CR>
+
 " Enable syntastic syntax checking
 "let g:syntastic_enable_signs=0
 "let g:syntastic_quiet_messages = {'level': 'warnings'}
