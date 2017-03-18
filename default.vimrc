@@ -127,8 +127,8 @@ map <leader><leader> :ZoomWin<CR>
 nnoremap <silent> <leader>bd :Kwbd<CR>
 
 " CTags
-set tags=./.tags,.tags,./tags,tags
-map <leader>rt :!ctags -R -f ./tags . <CR>
+set tags=./.tags-dep,.tags-dep,./.tags,.tags
+map <leader>rt :!ctags -R -f .tags . <CR>
 
 " Remember last location in file
 if has("autocmd")
