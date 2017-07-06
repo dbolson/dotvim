@@ -3,7 +3,7 @@
 ## Instructions
 
 ```
-git clone https://github.com/dbolson/dotvim.git ~/.config/nvim
+git clone git@github.com:dbolson/dotvim.git ~/.config/nvim
 cd ~/.config/nvim
 ./bin/install
 ```
