@@ -1,62 +1,28 @@
-set nocompatible
-filetype off
+call plug#begin('~/.local/share/nvim/plugged')
 
-set runtimepath+=~/.vim/bundle/Vundle.vim
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'Shougo/deoplete.nvim' " => neovim-ghcmod
+Plug 'derekwyatt/vim-scala'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'ervandew/supertab'
+Plug 'janko-m/vim-test'
+Plug 'neomake/neomake'
+Plug 'neovim/node-host', { 'do': 'npm install' } " mdown.vim
+Plug 'neovimhaskell/neovim-ghcmod' " haskell
+Plug 'pangloss/vim-javascript'
+Plug 'rgarver/Kwbd.vim'
+Plug 'rking/ag.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-classpath'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-salve'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-scripts/indentpython.vim'
+Plug 'vim-scripts/paredit.vim'
+Plug 'vimlab/mdown.vim', { 'do': 'npm install' }
+Plug 'vimlab/split-term.vim'
 
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-" Files
-Plugin 'jlanzarotta/bufexplorer'
-Plugin 'mileszs/ack.vim'
-Plugin 'rking/ag.vim'
-Plugin 'majutsushi/tagbar'
-
-" Text
-Plugin 'itspriddle/vim-marked'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-surround'
-"Plugin 'scrooloose/syntastic'
-
-" Git
-Plugin 'tpope/vim-fugitive'
-
-" Utilities
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'kien/ctrlp.vim'
-Plugin 'rgarver/Kwbd.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ZoomWin'
-Plugin 'metakirby5/codi.vim'
-
-" Ruby
-Plugin 'ruby-matchit'
-Plugin 'tpope/vim-rails'
-Plugin 'janko-m/vim-test'
-
-" JavaScript
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-
-" Clojure
-Plugin 'tpope/vim-dispatch'
-Plugin 'guns/vim-clojure-static'
-Plugin 'guns/vim-clojure-highlight'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-salve'
-Plugin 'paredit.vim'
-
-" Scala
-Plugin 'derekwyatt/vim-scala'
-
-" Python
-Plugin 'indentpython.vim'
-
-" Docker
-Plugin 'ekalinin/Dockerfile.vim'
-
-call vundle#end()
-filetype plugin indent on
+call plug#end()
