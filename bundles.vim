@@ -6,6 +6,7 @@ Plug 'derekwyatt/vim-scala'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'ervandew/supertab'
 Plug 'janko-m/vim-test'
+Plug 'mxw/vim-jsx'
 Plug 'neomake/neomake'
 Plug 'neovim/node-host', { 'do': 'npm install' } " mdown.vim
 Plug 'neovimhaskell/neovim-ghcmod' " haskell
