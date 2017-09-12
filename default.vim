@@ -23,6 +23,10 @@ set termguicolors
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 set wildmode=list:longest,list:full
 
+" Make `jj` and `jk` throw you into normal mode
+inoremap jj <esc>
+inoremap jk <esc>
+
 " Highlight after 100 characters
 augroup vimrc_autocmds
   autocmd BufEnter * highlight OverLength ctermfg=red guibg=#592929
