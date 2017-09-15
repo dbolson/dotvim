@@ -8,6 +8,7 @@ Plug 'derekwyatt/vim-scala'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'ervandew/supertab'
 Plug 'janko-m/vim-test'
+Plug 'milkypostman/vim-togglelist'
 Plug 'mxw/vim-jsx'
 Plug 'neomake/neomake'
 Plug 'neovimhaskell/neovim-ghcmod' " haskell
