@@ -5,3 +5,7 @@ source ~/.config/nvim/bundles.vim
 source ~/.config/nvim/default.vim
 source ~/.config/nvim/clojure.vim
 source ~/.config/nvim/scala.vim
+
+if filereadable("SpecificFile")
+  source ~/.config/nvim/work.vim
+endif
