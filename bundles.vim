@@ -11,6 +11,7 @@ Plug 'ensime/ensime-vim'
 Plug 'ervandew/supertab'
 Plug 'janko-m/vim-test'
 Plug 'milkypostman/vim-togglelist'
+Plug 'moll/vim-bbye'
 Plug 'mxw/vim-jsx'
 Plug 'neomake/neomake'
 Plug 'neovimhaskell/neovim-ghcmod' " haskell

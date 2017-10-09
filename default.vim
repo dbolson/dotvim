@@ -54,9 +54,12 @@ nnoremap <leader>ag :Ag<space>
 
 nnoremap <silent> <leader>bd :Kwbd<CR>
 
+:nnoremap <Leader>Q :Bdelete<CR>
+
 " CTags
 set tags=./.tags-dep,.tags-dep,./.tags,.tags
-map <leader>rt :!ctags -R -f .tags . <CR>
+nnoremap <leader>rt :!ctags -R -f .tags . <CR>
+nnoremap <leader>gf <C-]>
 
 " Add markdown syntax highlighting and spellcheck
 au BufRead,BufNewFile *.md set ft=markdown
