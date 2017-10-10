@@ -71,6 +71,9 @@ map <leader>M :set syntax=markdown<CR>:set wrap<CR>:set spell<CR>
 " React.js
 let g:jsx_ext_required = 0
 
+" airline-tab
+let g:airline#extensions#tabline#show_splits = 0
+
 " Easier split navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
