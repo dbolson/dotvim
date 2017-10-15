@@ -68,7 +68,10 @@ au BufRead,BufNewFile *.md setlocal wrap
 let g:markdown_fenced_languages = ['bash=sh', 'html', 'javascript', 'python', 'ruby', 'scala', 'vim']
 map <leader>M :set syntax=markdown<CR>:set wrap<CR>:set spell<CR>
 
-" React.js
+" python
+let g:neomake_python_enabled_makers = ['flake8', 'mypy']
+
+" react.js
 let g:jsx_ext_required = 0
 
 " airline-tab
